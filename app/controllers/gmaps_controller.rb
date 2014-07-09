@@ -5,11 +5,10 @@ class GmapsController < ApplicationController
   # GET /gmaps.json
   def index
     @gmaps = Gmap.all
-    @json = Gmap.all.to_gmaps4rails
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @gmaps }
-    end
+    @hash = Gmaps4rails.build_markers(@gmaps) do |gmap, marker|
+    marker.lat user.latitude
+    marker.lng user.longitude
+  end
   end
 
   # GET /gmaps/1

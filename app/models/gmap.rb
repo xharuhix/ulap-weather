@@ -1,8 +1,9 @@
 class Gmap < ActiveRecord::Base
-  attr_accessible :address, :latitude, :longitude, :name
-  acts_as_gmappable
+  geocoded_by :address
+  # , :latitude, :longitude, :name
+  after_validation :geocode
  
-  def gmaps4rails_address
-      address
-  end
+  # def gmaps4rails_address
+  #     address
+  # end
 end

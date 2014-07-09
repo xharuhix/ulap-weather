@@ -5,6 +5,8 @@ gem 'rails', '4.1.0'
 # gem 'sqlite3'
 # Google maps for rails
 gem 'gmaps4rails'
+gem 'protected_attributes'
+gem 'geocoder'
 # Use SCSS for stylesheets
 gem 'bootstrap-sass'
 gem 'sass-rails', '~> 4.0.3'
