@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @gmap.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @gmap.address %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @gmap.longitude %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @gmap.latitude %>
+</p>
+
+<p>
+  <strong>Gmaps:</strong>
+  <%= @gmap.gmaps %>
+</p>
+
+<%= link_to 'Edit', edit_gmap_path(@gmap) %> |
+<%= link_to 'Back', gmaps_path %>
